@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Online Auction System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .auction-timer {
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">SecureAuction</h1>
+            <div class="flex items-center space-x-4">
+                <button id="loginBtn" class="px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50">Login</button>
+                <button id="registerBtn" class="px-4 py-2 border border-white rounded-lg hover:bg-blue-500">Register</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Featured Auctions -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Featured Auctions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Auction Item 1 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="bg-gray-200 h-48 rounded-lg mb-4"></div>
+                    <h3 class="font-semibold text-lg mb-2">Vintage Watch</h3>
+                    <p class="text-gray-600 mb-4">Current Bid: $500</p>
+                    <div class="flex justify-between items-center">
+                        <span class="auction-timer text-red-500">2h 15m left</span>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Bid Now</button>
+                    </div>
+                </div>
+
+                <!-- Auction Item 2 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="bg-gray-200 h-48 rounded-lg mb-4"></div>
+                    <h3 class="font-semibold text-lg mb-2">Art Collection</h3>
+                    <p class="text-gray-600 mb-4">Current Bid: $1,200</p>
+                    <div class="flex justify-between items-center">
+                        <span class="auction-timer text-red-500">4h 30m left</span>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Bid Now</button>
+                    </div>
+                </div>
+
+                <!-- Auction Item 3 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="bg-gray-200 h-48 rounded-lg mb-4"></div>
+                    <h3 class="font-semibold text-lg mb-2">Antique Furniture</h3>
+                    <p class="text-gray-600 mb-4">Current Bid: $800</p>
+                    <div class="flex justify-between items-center">
+                        <span class="auction-timer text-red-500">1h 45m left</span>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Bid Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Features -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Our Security Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="bi bi-shield-lock text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Blockchain Verification</h3>
+                    <p class="text-gray-600">All bids are recorded on blockchain for maximum security and transparency.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="bi bi-eye text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Fraud Detection</h3>
+                    <p class="text-gray-600">AI-powered system monitors all activities to prevent fraudulent behavior.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="bi bi-lock text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Secure Payments</h3>
+                    <p class="text-gray-600">End-to-end encrypted payment processing with escrow protection.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                    <p class="text-gray-400">SecureAuction provides a safe and transparent platform for online auctions.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">How It Works</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Security</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-400">Email: support@secureauction.com</p>
+                    <p class="text-gray-400">Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Timer functionality
+        function updateTimers() {
+            const timers = document.querySelectorAll('.auction-timer');
+            timers.forEach(timer => {
+                // In a real application, this would be connected to a backend
+                // that tracks actual auction end times
+                const timeLeft = timer.textContent;
+                // Update timer logic would go here
+            });
+        }
+
+        // Update timers every second
+        setInterval(updateTimers, 1000);
+
+        // Login/Register button handlers
+        document.getElementById('loginBtn').addEventListener('click', () => {
+            // Implement login modal or redirect
+            alert('Login functionality would be implemented here');
+        });
+
+        document.getElementById('registerBtn').addEventListener('click', () => {
+            // Implement register modal or redirect
+            alert('Register functionality would be implemented here');
+        });
+
+        // Bid button handlers
+        document.querySelectorAll('button').forEach(button => {
+            if(button.textContent === 'Bid Now') {
+                button.addEventListener('click', () => {
+                    // Implement bidding functionality
+                    alert('Bidding functionality would be implemented here');
+                });
+            }
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
